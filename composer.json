@@ -1,0 +1,32 @@
+{
+    "name": "hivokas/laravel-email-blacklist",
+    "description": "Email blacklist management for Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hivokas\\EmailBlacklist\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hivokas\\EmailBlacklist\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hivokas\\EmailBlacklist\\Providers\\EmailBlacklistServiceProvider"
+            ]
+        }
+    }
+}
