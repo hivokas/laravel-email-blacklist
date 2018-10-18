@@ -67,7 +67,7 @@ EmailBlacklist::exists('me@hivokas.com'); // true
 
 EmailBlacklist::remove('me@hivokas.com');
 
-EmailBlacklist::exists('me@hivokas.com); // false
+EmailBlacklist::exists('me@hivokas.com'); // false
 
 EmailBlacklist::count(); // 0
 
