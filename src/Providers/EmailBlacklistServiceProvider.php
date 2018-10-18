@@ -2,6 +2,8 @@
 
 namespace Hivokas\EmailBlacklist\Providers;
 
+use Hivokas\EmailBlacklist\Contracts\EmailBlacklist as EmailBlacklistContract;
+use Hivokas\EmailBlacklist\EmailBlacklist;
 use Illuminate\Support\ServiceProvider;
 
 class EmailBlacklistServiceProvider extends ServiceProvider
@@ -31,6 +33,10 @@ class EmailBlacklistServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->bind(EmailBlacklistContract::class, EmailBlacklist::class);
+
+        $this->app->singleton('email_blacklist', EmailBlacklistContract::class);
+
         $this->mergeConfigFrom(
             __DIR__.'/../../config/email_blacklist.php',
             'email_blacklist'
