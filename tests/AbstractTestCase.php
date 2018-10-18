@@ -1,8 +1,8 @@
 <?php
 
-namespace Hivokas\EmailBlackList\Tests;
+namespace Hivokas\EmailBlacklist\Tests;
 
-use Hivokas\EmailBlackList\Providers\EmailBlacklistServiceProvider;
+use Hivokas\EmailBlacklist\Providers\EmailBlacklistServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 abstract class AbstractTestCase extends OrchestraTestCase
